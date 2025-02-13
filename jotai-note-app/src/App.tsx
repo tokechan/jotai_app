@@ -6,10 +6,10 @@ import { useEffect } from "react";
 import { useQuery } from "convex/react";
 import { api } from "../convex/_generated/api";
 import { Note } from "./domain/note";
-function App () {
+
+function App() {
   const setNotes = useSetAtom(notesAtom);
   const initializeNotes = useQuery(api.notes.get);
-
 
   useEffect(() => {
     const notes = initializeNotes?.map(
@@ -21,8 +21,8 @@ function App () {
   return (
     <>
       <div className="flex h-screen w-full bg-white">
-      <SideMenu />
-      <Editor />
+        <SideMenu />
+        <Editor />
       </div>
     </>
   );

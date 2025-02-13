@@ -1,8 +1,10 @@
+import { Id } from "../../convex/_generated/dataModel";
+
 export class Note {
-    constructor(
-        public id: string,
-        public title: string,
-        public content: string,
-        public lastEditTime: number
-    ) {}
+  constructor(
+    public id: Id<"notes">,
+    public title: string,
+    public content: string,
+    public lastEditTime: number
+  ) {}
 }
